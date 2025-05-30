@@ -1,0 +1,59 @@
+{
+  "name": "content-management-frontend",
+  "version": "1.0.0",
+  "description": "React Frontend for Content Management System",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1",
+    "axios": "^1.6.0",
+    "react-router-dom": "^6.8.1",
+    "react-hot-toast": "^2.4.1",
+    "lucide-react": "^0.263.1",
+    "clsx": "^2.0.0",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "serve": "serve -s build -l 3000",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:app-navigation": "DEBUG=cypress:* cypress run --spec 'cypress/e2e/app-navigation.cy.js' --config defaultCommandTimeout=30000,requestTimeout=30000,responseTimeout=30000,pageLoadTimeout=60000 --browser chrome --headed --no-exit",
+    "cy:content-management": "DEBUG=cypress:* cypress run --spec 'cypress/e2e/content-management.cy.js' --config defaultCommandTimeout=30000,requestTimeout=30000,responseTimeout=30000,pageLoadTimeout=60000 --browser chrome --headed --no-exit",
+    "cy:chat-functionality": "DEBUG=cypress:* cypress run --spec 'cypress/e2e/chat-functionality.cy.js' --config defaultCommandTimeout=30000,requestTimeout=30000,responseTimeout=30000,pageLoadTimeout=60000 --browser chrome --headed --no-exit",
+    "cy:full-workflow": "DEBUG=cypress:* cypress run --spec 'cypress/e2e/full-user-workflow.cy.js' --config defaultCommandTimeout=30000,requestTimeout=30000,responseTimeout=30000,pageLoadTimeout=60000 --browser chrome --headed --no-exit",
+    "e2e": "start-server-and-test start http://localhost:3000 cy:run",
+    "e2e:open": "start-server-and-test start http://localhost:3000 cy:open"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "serve": "^14.2.1",
+    "cypress": "^13.6.0",
+    "start-server-and-test": "^2.0.3"
+  },
+  "proxy": "http://localhost:8000"
+} 

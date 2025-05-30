@@ -1,0 +1,16 @@
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.git
+.gitignore
+.env
+.nyc_output
+coverage
+.cache
+.DS_Store
+*.log
+
+# Keep these files
+!wait-for-backend.sh
+!package-lock.json 

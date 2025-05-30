@@ -1,0 +1,256 @@
+/* Debug Toolbar Styles */
+.debug-toggle-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #6B3AA0;
+  color: white;
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.debug-toggle-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.debug-toolbar {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 450px;
+  max-height: 70vh;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.debug-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 20px;
+  background: #6B3AA0;
+  color: white;
+}
+
+.debug-header h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.debug-close-btn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s;
+}
+
+.debug-close-btn:hover {
+  opacity: 0.8;
+}
+
+.debug-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+  background: #ffffff;
+}
+
+.debug-section {
+  margin-bottom: 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.debug-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: #f5f5f5;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.debug-section-header:hover {
+  background: #eeeeee;
+}
+
+.debug-section-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #333333;
+}
+
+.debug-section-content {
+  padding: 16px;
+  background: #ffffff;
+}
+
+.debug-passage {
+  margin-bottom: 16px;
+  padding: 12px;
+  background: #f8f8f8;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+.debug-passage:last-child {
+  margin-bottom: 0;
+}
+
+.debug-passage-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.debug-passage-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 500;
+  color: #6B3AA0;
+}
+
+.debug-passage-score {
+  font-size: 12px;
+  color: #666666;
+  background: #ffffff;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.debug-passage-meta {
+  display: flex;
+  gap: 8px;
+  font-size: 12px;
+  color: #666666;
+  margin-bottom: 8px;
+}
+
+.debug-passage-content {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #333333;
+  max-height: 100px;
+  overflow-y: auto;
+  padding: 8px;
+  background: #ffffff;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+.debug-chunk-info {
+  display: flex;
+  gap: 8px;
+  font-size: 11px;
+  color: #666666;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.debug-info-item {
+  margin-bottom: 8px;
+  font-size: 13px;
+  color: #333333;
+}
+
+.debug-info-item:last-child {
+  margin-bottom: 0;
+}
+
+.debug-info-item strong {
+  color: #000000;
+  margin-right: 4px;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .debug-toolbar {
+    background: #1a1a1a;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  }
+
+  .debug-content {
+    background: #1a1a1a;
+  }
+
+  .debug-section-header {
+    background: #252525;
+  }
+
+  .debug-section-header:hover {
+    background: #2a2a2a;
+  }
+
+  .debug-section-title {
+    color: #ffffff;
+  }
+
+  .debug-passage {
+    background: #252525;
+  }
+
+  .debug-passage-content {
+    background: #1a1a1a;
+    color: #ffffff;
+  }
+
+  .debug-passage-score {
+    background: #2a2a2a;
+    color: #cccccc;
+  }
+
+  .debug-info-item {
+    color: #ffffff;
+  }
+
+  .debug-info-item strong {
+    color: #ffffff;
+  }
+
+  .debug-passage-meta {
+    color: #cccccc;
+  }
+
+  .debug-chunk-info {
+    color: #cccccc;
+    border-top-color: #444444;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .debug-toolbar {
+    width: calc(100vw - 40px);
+    right: 20px;
+    left: 20px;
+    bottom: 80px;
+  }
+} 

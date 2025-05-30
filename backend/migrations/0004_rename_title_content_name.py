@@ -4,7 +4,6 @@ from django.db import migrations
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
         ("main", "0003_remove_content_content_remove_content_created_at_and_more"),
     ]
