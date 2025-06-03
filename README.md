@@ -2,6 +2,9 @@
 
 A full-stack AI-powered educational content analysis system with semantic search and conversational assistant capabilities. Built with Django backend, React frontend, PostgreSQL, Qdrant vector database, and OpenAI integration.
 
+Demo: https://www.youtube.com/watch?v=4zguDvcLA4k&ab_channel=IvanSoares
+
+
 ## 🚀 Quick Start
 
 ```bash
